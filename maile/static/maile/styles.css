@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+body {
+    background: #0a4257;
+    color: #c06162;
+    font-family: 'Sen';
+    min-height: 100vh;
+    position: absolute;
+    display: block;
+}
+
+html, body {
+    min-height: 100%;
+    min-width: 100%;
+}
+
+div.centerDiv {
+    margin: 0 auto;
+    max-width: 40%;
+}
