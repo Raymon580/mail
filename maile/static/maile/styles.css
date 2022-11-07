@@ -15,5 +15,16 @@ html, body {
 
 div.centerDiv {
     margin: 0 auto;
-    max-width: 40%;
+    max-width: 60%;
+}
+
+div#composeButton {
+    position: fixed;
+    right: 100px;
+    bottom: 60px;
+}
+
+button#compose {
+    height: 60px;
+    width: 60px;
 }
