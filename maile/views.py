@@ -15,11 +15,11 @@ def index(request):
 def login_view(request):
     if request.method == "POST":
 
-        username = request.POST["username"]
+        email = request.POST["email"]
         password = request.POST["password"]
 
         # Attempt to sign user in
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=email, password=password)
 
         # Check if authentication successful
         if user is not None:
@@ -27,7 +27,7 @@ def login_view(request):
             return HttpResponseRedirect(reverse("index"))
         else:
             return render(request, "maile/login.html", {
-                "message": "Invalid username and/or password.",
+                "message": "Invalid email and/or password.",
                 "userForm": RegistrationForm()
             })
     else:
@@ -46,7 +46,6 @@ def register(request):
         form = RegistrationForm(request.POST)
 
         if form.is_valid() == True:
-            username = form.cleaned_data["username"]
             first_name = form.cleaned_data["first_name"]
             last_name = form.cleaned_data["last_name"]
             email = form.cleaned_data["email"]
@@ -59,7 +58,7 @@ def register(request):
                     "message": "Passwords must match.",
                     "userForm": RegistrationForm()
                 })
-            user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name, email=email, password=password)
+            user = User.objects.create_user(username=email, first_name=first_name, last_name=last_name, email=email, password=password)
             user.save()
             login(request, user)
             return HttpResponseRedirect(reverse("index"))

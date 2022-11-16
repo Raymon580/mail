@@ -20,7 +20,7 @@
             <form class="row g-3" action="{% url 'login' %}" method="post">
                 {% csrf_token %}
                 <div class="col-12">
-                    {{ userForm.username }}
+                    {{ userForm.email }}
                 </div>
                 <div class="col-12">
                     {{ userForm.password }}

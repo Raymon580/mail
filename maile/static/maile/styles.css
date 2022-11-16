@@ -28,3 +28,54 @@ button#compose {
     height: 60px;
     width: 60px;
 }
+
+/* Animation for dropdown */
+.dropdown_menu-9 {
+    animation: growOut 300ms ease-in-out forwards;
+    transform-origin: top center;
+}
+
+@-moz-keyframes growOut {
+    0% {
+    transform: scale(0);
+    }
+    80% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+@-webkit-keyframes growOut {
+    0% {
+    transform: scale(0);
+    }
+    80% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+@-o-keyframes growOut {
+    0% {
+    transform: scale(0);
+    }
+    80% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+@keyframes growOut {
+    0% {
+    transform: scale(0);
+    }
+    80% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
